@@ -1,0 +1,1650 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Villa Emilia</title>
+<meta name="description" content="Cabaña privada frente al mar en Panamá — Private beachfront cabin in Panama">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap">
+
+<style>
+:root {
+  --cream: #FAF6F0;
+  --cream-warm: #F2EBE0;
+  --teal: #1A7D7A;
+  --teal-deep: #0E5856;
+  --teal-soft: #A8D5D3;
+  --coral: #E8725A;
+  --coral-soft: #F4B5A7;
+  --sand-dark: #C4A882;
+  --sand-mid: #D9C9AD;
+  --night: #1A1E2E;
+  --night-deep: #0F1219;
+  --text: #2B2D2E;
+  --text-soft: #6B7280;
+  --surface: #FFFFFF;
+  --surface-alt: #F7F3ED;
+  --hero-overlay: rgba(15, 18, 25, 0.45);
+  --card-border: rgba(26, 125, 122, 0.12);
+  --card-shadow: 0 8px 32px rgba(26, 30, 46, 0.08);
+  --nav-bg: rgba(250, 246, 240, 0.92);
+  --divider: rgba(26, 125, 122, 0.1);
+  --gold: #D4A853;
+  --gold-soft: #EDD9A3;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --cream: #141820;
+    --cream-warm: #1A1F2C;
+    --text: #E8E4DE;
+    --text-soft: #9CA3AF;
+    --surface: #1C2030;
+    --surface-alt: #212638;
+    --hero-overlay: rgba(15, 18, 25, 0.55);
+    --card-border: rgba(26, 125, 122, 0.18);
+    --card-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    --nav-bg: rgba(20, 24, 32, 0.94);
+    --divider: rgba(26, 125, 122, 0.08);
+    --teal: #3DB8B5;
+    --teal-soft: #2A8A88;
+    --coral: #F08B76;
+    --coral-soft: #C4645A;
+    --sand-dark: #9A8464;
+    --sand-mid: #7A6B52;
+  }
+}
+:root[data-theme="dark"] {
+  --cream: #141820;
+  --cream-warm: #1A1F2C;
+  --text: #E8E4DE;
+  --text-soft: #9CA3AF;
+  --surface: #1C2030;
+  --surface-alt: #212638;
+  --hero-overlay: rgba(15, 18, 25, 0.55);
+  --card-border: rgba(26, 125, 122, 0.18);
+  --card-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  --nav-bg: rgba(20, 24, 32, 0.94);
+  --divider: rgba(26, 125, 122, 0.08);
+  --teal: #3DB8B5;
+  --teal-soft: #2A8A88;
+  --coral: #F08B76;
+  --coral-soft: #C4645A;
+  --sand-dark: #9A8464;
+  --sand-mid: #7A6B52;
+}
+
+* { margin: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'DM Sans', 'Segoe UI', system-ui, sans-serif;
+  background: var(--cream);
+  color: var(--text);
+  line-height: 1.65;
+  overflow-x: hidden;
+  padding: 0;
+}
+
+h1, h2, h3, .display {
+  font-family: 'Playfair Display', 'Georgia', serif;
+}
+
+/* --- NAV --- */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: var(--nav-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  padding: env(safe-area-inset-top, 0px) 0 0 0;
+  border-bottom: 1px solid var(--divider);
+  transition: box-shadow 0.3s;
+}
+.nav.scrolled {
+  box-shadow: 0 2px 24px rgba(0,0,0,0.08);
+}
+.nav-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+.nav-logo {
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  font-size: 1.4rem;
+  color: var(--teal-deep);
+  text-decoration: none;
+  letter-spacing: -0.01em;
+}
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  list-style: none;
+  padding: 0;
+}
+.nav-links a {
+  color: var(--text-soft);
+  text-decoration: none;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  transition: color 0.2s;
+}
+.nav-links a:hover { color: var(--teal); }
+.lang-toggle {
+  background: var(--surface-alt);
+  border: 1px solid var(--card-border);
+  border-radius: 20px;
+  padding: 3px;
+  display: flex;
+  gap: 2px;
+}
+.lang-btn {
+  border: none;
+  background: transparent;
+  padding: 5px 12px;
+  font-size: 0.76rem;
+  font-weight: 700;
+  border-radius: 16px;
+  cursor: pointer;
+  color: var(--text-soft);
+  transition: all 0.2s;
+  font-family: inherit;
+}
+.lang-btn.active {
+  background: var(--teal);
+  color: #fff;
+}
+.nav-cta {
+  background: var(--coral);
+  color: #fff !important;
+  padding: 9px 20px;
+  border-radius: 24px;
+  font-size: 0.8rem !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.06em !important;
+  transition: background 0.2s, transform 0.2s;
+  white-space: nowrap;
+}
+.nav-cta:hover { background: #D4634D; transform: translateY(-1px); }
+
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  color: var(--text);
+  padding: 0;
+}
+
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  .nav-links.open {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--nav-bg);
+    backdrop-filter: blur(16px);
+    padding: 24px;
+    gap: 18px;
+    border-bottom: 1px solid var(--divider);
+  }
+  .mobile-menu-btn { display: block; }
+}
+
+/* --- HERO --- */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background: #0F1219;
+}
+.hero-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.hero-poster {
+  position: absolute;
+  inset: 0;
+  background: url('fotos/heronuevo.jpg') center/cover no-repeat;
+}
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: var(--hero-overlay);
+}
+.hero-particles {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: 1;
+}
+.hero-particle {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  background: rgba(255,255,255,0.3);
+  border-radius: 50%;
+  animation: float 8s ease-in-out infinite;
+}
+.hero-particle:nth-child(1) { left: 15%; top: 25%; animation-delay: 0s; animation-duration: 7s; }
+.hero-particle:nth-child(2) { left: 45%; top: 60%; animation-delay: 1.5s; animation-duration: 9s; }
+.hero-particle:nth-child(3) { left: 75%; top: 35%; animation-delay: 3s; animation-duration: 6s; }
+.hero-particle:nth-child(4) { left: 30%; top: 80%; animation-delay: 2s; animation-duration: 8s; width: 2px; height: 2px; }
+.hero-particle:nth-child(5) { left: 85%; top: 70%; animation-delay: 4s; animation-duration: 10s; width: 4px; height: 4px; }
+@keyframes float {
+  0%, 100% { transform: translateY(0) scale(1); opacity: 0.3; }
+  50% { transform: translateY(-30px) scale(1.5); opacity: 0.7; }
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 120px 24px 80px;
+  max-width: 860px;
+}
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 24px;
+  padding: 8px 20px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold-soft);
+  margin-bottom: 28px;
+  backdrop-filter: blur(8px);
+}
+.hero h1 {
+  font-size: clamp(3rem, 8vw, 5.5rem);
+  font-weight: 400;
+  color: #fff;
+  line-height: 1.02;
+  margin-bottom: 24px;
+  text-wrap: balance;
+  letter-spacing: -0.02em;
+}
+.hero h1 em {
+  font-style: italic;
+  color: var(--teal-soft);
+}
+.hero-sub {
+  font-size: clamp(1rem, 2.5vw, 1.15rem);
+  color: rgba(255,255,255,0.75);
+  max-width: 520px;
+  margin: 0 auto 40px;
+  line-height: 1.7;
+}
+.hero-cta-group {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--coral);
+  color: #fff;
+  padding: 16px 36px;
+  border-radius: 32px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.2s, box-shadow 0.2s;
+  font-family: inherit;
+  letter-spacing: 0.02em;
+}
+.btn-primary:hover {
+  background: #D4634D;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(232,114,90,0.3);
+}
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  color: #fff;
+  padding: 16px 36px;
+  border-radius: 32px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  border: 1px solid rgba(255,255,255,0.25);
+  transition: background 0.2s, border-color 0.2s;
+  cursor: pointer;
+}
+.btn-ghost:hover {
+  background: rgba(255,255,255,0.1);
+  border-color: rgba(255,255,255,0.4);
+}
+
+.hero-scroll {
+  position: absolute;
+  bottom: 36px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  animation: bobDown 2.5s ease-in-out infinite;
+}
+@keyframes bobDown {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(10px); }
+}
+.hero-scroll svg { width: 24px; height: 24px; stroke: rgba(255,255,255,0.4); fill: none; stroke-width: 2; }
+
+/* --- SECTIONS --- */
+.section {
+  padding: 100px 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.section-header {
+  text-align: center;
+  margin-bottom: 64px;
+}
+.section-eyebrow {
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--teal);
+  margin-bottom: 14px;
+}
+.section h2 {
+  font-size: clamp(2rem, 4.5vw, 3.2rem);
+  font-weight: 400;
+  color: var(--text);
+  line-height: 1.12;
+  text-wrap: balance;
+  letter-spacing: -0.01em;
+}
+.section h2 em {
+  font-style: italic;
+  color: var(--coral);
+}
+.section-desc {
+  max-width: 560px;
+  margin: 16px auto 0;
+  color: var(--text-soft);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+/* --- HIGHLIGHTS STRIP --- */
+.highlights {
+  background: var(--teal-deep);
+  color: #fff;
+  overflow: hidden;
+  position: relative;
+}
+.highlights::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: rgba(168,213,211,0.06);
+}
+.highlights-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.highlight-item {
+  padding: 48px 32px;
+  text-align: center;
+  border-right: 1px solid rgba(255,255,255,0.08);
+  position: relative;
+}
+.highlight-item:last-child { border-right: none; }
+.highlight-icon {
+  font-size: 2rem;
+  margin-bottom: 14px;
+  display: block;
+  filter: grayscale(0.2);
+}
+.highlight-item h3 {
+  font-size: 1.05rem;
+  font-weight: 500;
+  margin-bottom: 6px;
+  font-family: 'Playfair Display', serif;
+  color: var(--gold-soft);
+}
+.highlight-item p {
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.6);
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .highlights-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .highlight-item {
+    padding: 32px 20px;
+  }
+  .highlight-item:nth-child(2) { border-right: none; }
+  .highlight-item:nth-child(1),
+  .highlight-item:nth-child(2) { border-bottom: 1px solid rgba(255,255,255,0.08); }
+}
+@media (max-width: 440px) {
+  .highlights-grid { grid-template-columns: 1fr; }
+  .highlight-item { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.08); }
+  .highlight-item:last-child { border-bottom: none; }
+}
+
+/* --- PHOTO GRID (GALLERY) --- */
+.photo-section {
+  background: var(--cream-warm);
+  border-top: 1px solid var(--divider);
+  border-bottom: 1px solid var(--divider);
+}
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-auto-rows: 180px;
+  gap: 8px;
+}
+.photo-item {
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+.photo-item:hover { transform: scale(1.02); }
+.photo-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.photo-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.5);
+}
+.photo-item:nth-child(1) { grid-column: span 5; grid-row: span 2; }
+.photo-item:nth-child(2) { grid-column: span 4; }
+.photo-item:nth-child(3) { grid-column: span 3; }
+.photo-item:nth-child(4) { grid-column: span 3; }
+.photo-item:nth-child(5) { grid-column: span 4; grid-row: span 2; }
+.photo-item:nth-child(6) { grid-column: span 5; }
+.photo-item:nth-child(7) { grid-column: span 5; }
+.photo-item:nth-child(8) { grid-column: span 7; }
+
+@media (max-width: 768px) {
+  .photo-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 160px;
+  }
+  .photo-item:nth-child(1) { grid-column: span 2; grid-row: span 1; }
+  .photo-item:nth-child(2),
+  .photo-item:nth-child(3),
+  .photo-item:nth-child(4) { grid-column: span 1; grid-row: span 1; }
+  .photo-item:nth-child(5) { grid-column: span 2; grid-row: span 1; }
+  .photo-item:nth-child(6) { grid-column: span 2; }
+  .photo-item:nth-child(7) { grid-column: span 1; }
+  .photo-item:nth-child(8) { grid-column: span 1; }
+}
+
+/* --- ABOUT --- */
+.about-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 72px;
+  align-items: center;
+}
+.about-visual {
+  position: relative;
+}
+.about-img-main {
+  aspect-ratio: 3/4;
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+}
+.about-img-main img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.about-img-float {
+  position: absolute;
+  bottom: -24px;
+  right: -24px;
+  width: 55%;
+  aspect-ratio: 4/3;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 4px solid var(--cream);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+}
+.about-img-float img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.about-text .section-eyebrow { text-align: left; }
+.about-text h2 {
+  text-align: left;
+  margin-bottom: 24px;
+}
+.about-text p {
+  color: var(--text-soft);
+  margin-bottom: 20px;
+  font-size: 1rem;
+  line-height: 1.75;
+}
+.about-features {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 32px;
+}
+.about-feature {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text);
+}
+.about-feature-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--teal);
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .about-layout {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+  .about-img-float {
+    right: 16px;
+    bottom: -16px;
+    width: 45%;
+  }
+  .about-features { grid-template-columns: 1fr; }
+}
+
+/* --- EXPERIENCES --- */
+.exp-section {
+  background: var(--surface);
+  border-top: 1px solid var(--divider);
+  border-bottom: 1px solid var(--divider);
+}
+.exp-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.exp-card {
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  aspect-ratio: 3/4;
+  display: flex;
+  align-items: flex-end;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+.exp-card:hover { transform: translateY(-6px); }
+.exp-card-bg {
+  position: absolute;
+  inset: 0;
+}
+.exp-card:nth-child(1) .exp-card-bg {
+  background: url('fotos/galera.jpeg') center/cover no-repeat;
+}
+.exp-card:nth-child(2) .exp-card-bg {
+  background: url('fotos/heronuevo.jpg') center/cover no-repeat;
+}
+.exp-card:nth-child(3) .exp-card-bg {
+  background: url('fotos/fotosnoche1.jpeg') center/cover no-repeat;
+}
+.exp-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(15,18,25,0.85) 0%, rgba(15,18,25,0.2) 40%, transparent 60%);
+}
+.exp-card-content {
+  position: relative;
+  z-index: 2;
+  padding: 32px 28px;
+  width: 100%;
+}
+.exp-card-tag {
+  display: inline-block;
+  background: rgba(255,255,255,0.15);
+  border-radius: 20px;
+  padding: 4px 14px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold-soft);
+  margin-bottom: 12px;
+  backdrop-filter: blur(4px);
+}
+.exp-card-content h3 {
+  font-size: 1.5rem;
+  color: #fff;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+.exp-card-content p {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.75);
+  line-height: 1.55;
+}
+
+@media (max-width: 768px) {
+  .exp-grid {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  .exp-card { aspect-ratio: 4/3; }
+}
+
+/* --- AMENITIES --- */
+.amenities-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.amenity-card {
+  background: var(--surface);
+  border: 1px solid var(--card-border);
+  border-radius: 16px;
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.amenity-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--card-shadow);
+}
+.amenity-icon-wrap {
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--surface-alt);
+  border-radius: 14px;
+  font-size: 1.5rem;
+}
+.amenity-card h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  font-family: 'Playfair Display', serif;
+  color: var(--text);
+}
+.amenity-card p {
+  font-size: 0.85rem;
+  color: var(--text-soft);
+  line-height: 1.55;
+}
+
+@media (max-width: 768px) {
+  .amenities-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 500px) {
+  .amenities-grid { grid-template-columns: 1fr; }
+}
+
+/* --- TESTIMONIAL --- */
+.testimonial-section {
+  background: var(--surface-alt);
+  border-top: 1px solid var(--divider);
+  border-bottom: 1px solid var(--divider);
+  padding: 100px 24px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.testimonial-section::before {
+  content: '\201C';
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: 'Playfair Display', serif;
+  font-size: 12rem;
+  color: var(--teal);
+  opacity: 0.06;
+  line-height: 1;
+}
+.testimonial-inner {
+  max-width: 700px;
+  margin: 0 auto;
+  position: relative;
+}
+.testimonial-stars {
+  color: var(--gold);
+  font-size: 1rem;
+  letter-spacing: 6px;
+  margin-bottom: 28px;
+}
+.testimonial-quote {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.3rem, 3vw, 1.8rem);
+  font-style: italic;
+  color: var(--text);
+  line-height: 1.55;
+  margin-bottom: 28px;
+  font-weight: 400;
+}
+.testimonial-author {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--teal);
+  letter-spacing: 0.04em;
+}
+
+/* --- LOCATION --- */
+.location-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+  align-items: start;
+}
+.location-details h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: var(--teal-deep);
+  font-family: 'Playfair Display', serif;
+}
+.location-details ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 32px;
+}
+.location-details li {
+  padding: 12px 0;
+  font-size: 0.92rem;
+  color: var(--text-soft);
+  border-bottom: 1px solid var(--divider);
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+.location-details li span:first-child { flex-shrink: 0; font-size: 1.1rem; }
+.location-map {
+  aspect-ratio: 4/3;
+  border-radius: 16px;
+  overflow: hidden;
+  background: var(--surface-alt);
+  border: 1px solid var(--card-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 12px;
+  color: var(--text-soft);
+  font-size: 0.85rem;
+}
+.location-map-icon { font-size: 2.4rem; }
+
+@media (max-width: 768px) {
+  .location-layout { grid-template-columns: 1fr; }
+}
+
+/* --- BOOKING --- */
+.booking-section {
+  background: linear-gradient(170deg, #0F1219, #1A3A38 50%, #0E5856);
+  padding: 100px 24px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.booking-section::before {
+  content: '';
+  position: absolute;
+  top: -30%;
+  right: -15%;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: rgba(26, 125, 122, 0.1);
+}
+.booking-section::after {
+  content: '';
+  position: absolute;
+  bottom: -20%;
+  left: -10%;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background: rgba(232,114,90,0.06);
+}
+.booking-content {
+  max-width: 640px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+.booking-section h2 {
+  font-size: clamp(2rem, 4.5vw, 3.2rem);
+  color: #fff;
+  margin-bottom: 16px;
+  font-weight: 400;
+}
+.booking-section h2 em { color: var(--coral-soft); }
+.booking-sub {
+  color: rgba(255,255,255,0.65);
+  font-size: 1.02rem;
+  margin-bottom: 44px;
+  line-height: 1.7;
+}
+.booking-form {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 24px;
+  padding: 36px;
+  text-align: left;
+  margin-bottom: 28px;
+  backdrop-filter: blur(8px);
+}
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+@media (max-width: 500px) {
+  .form-row { grid-template-columns: 1fr; }
+}
+.form-group label {
+  display: block;
+  font-size: 0.76rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.55);
+  margin-bottom: 7px;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+}
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 13px 16px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(255,255,255,0.05);
+  color: #fff;
+  font-size: 0.92rem;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.2s, background 0.2s;
+}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--teal-soft);
+  background: rgba(255,255,255,0.08);
+}
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: rgba(255,255,255,0.25);
+}
+.form-group select option {
+  background: #0F1219;
+  color: #fff;
+}
+.form-group textarea { resize: vertical; min-height: 80px; }
+.form-full { grid-column: 1 / -1; }
+
+.whatsapp-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #25D366;
+  color: #fff;
+  padding: 16px 40px;
+  border-radius: 32px;
+  font-size: 1.02rem;
+  font-weight: 700;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.2s, box-shadow 0.2s;
+  font-family: inherit;
+  width: 100%;
+  justify-content: center;
+}
+.whatsapp-btn:hover {
+  background: #20BD5A;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(37,211,102,0.25);
+}
+.whatsapp-btn svg {
+  width: 22px;
+  height: 22px;
+  fill: currentColor;
+}
+.booking-note {
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.4);
+  margin-top: 16px;
+}
+
+/* Form states */
+.form-success {
+  text-align: center;
+  padding: 48px 24px;
+}
+.form-success-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: rgba(37,211,102,0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  margin: 0 auto 20px;
+}
+.form-success h3 {
+  font-size: 1.5rem;
+  color: #fff;
+  margin-bottom: 12px;
+  font-family: 'Playfair Display', serif;
+}
+.form-success p {
+  color: rgba(255,255,255,0.65);
+  font-size: 0.92rem;
+  margin-bottom: 8px;
+}
+.form-sending {
+  opacity: 0.6;
+  pointer-events: none;
+}
+.form-error-msg {
+  background: rgba(232,114,90,0.12);
+  border: 1px solid rgba(232,114,90,0.25);
+  color: var(--coral-soft);
+  padding: 10px 16px;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  margin-bottom: 16px;
+  display: none;
+}
+
+/* --- FOOTER --- */
+.footer {
+  background: var(--night-deep);
+  padding: 56px 24px 36px;
+}
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 48px;
+  padding-bottom: 36px;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  margin-bottom: 28px;
+}
+.footer-brand .footer-logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 12px;
+}
+.footer-brand .footer-tagline {
+  color: rgba(255,255,255,0.4);
+  font-size: 0.88rem;
+  font-style: italic;
+  line-height: 1.5;
+}
+.footer-col h4 {
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.5);
+  margin-bottom: 16px;
+  font-family: 'DM Sans', sans-serif;
+}
+.footer-col a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: rgba(255,255,255,0.55);
+  text-decoration: none;
+  font-size: 0.88rem;
+  margin-bottom: 10px;
+  transition: color 0.2s;
+}
+.footer-col a:hover { color: var(--teal-soft); }
+.footer-copy {
+  text-align: center;
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.25);
+}
+
+@media (max-width: 768px) {
+  .footer-inner {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    text-align: center;
+  }
+  .footer-col a { justify-content: center; }
+}
+
+/* --- FLOATING CTA MOBILE --- */
+.floating-cta {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  padding: 12px 20px;
+  padding-bottom: calc(12px + env(safe-area-inset-bottom, 0px));
+  background: var(--nav-bg);
+  backdrop-filter: blur(16px);
+  border-top: 1px solid var(--divider);
+}
+.floating-cta .whatsapp-btn {
+  padding: 14px 24px;
+  font-size: 0.92rem;
+}
+@media (max-width: 768px) {
+  .floating-cta { display: block; }
+  .footer { padding-bottom: calc(100px + env(safe-area-inset-bottom, 0px)); }
+}
+
+html { scroll-behavior: smooth; }
+
+:focus-visible {
+  outline: 2px solid var(--teal);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+  html { scroll-behavior: auto; }
+}
+</style>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">Villa Emilia</a>
+    <button class="mobile-menu-btn" id="menuBtn" aria-label="Menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+      </svg>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#gallery" data-es="Fotos" data-en="Photos">Fotos</a></li>
+      <li><a href="#about" data-es="La Villa" data-en="The Villa">La Villa</a></li>
+      <li><a href="#experiences" data-es="Experiencias" data-en="Experiences">Experiencias</a></li>
+      <li><a href="#location" data-es="Ubicaci&#243;n" data-en="Location">Ubicaci&#243;n</a></li>
+      <li>
+        <div class="lang-toggle">
+          <button class="lang-btn active" id="langEs" onclick="setLang('es')">ES</button>
+          <button class="lang-btn" id="langEn" onclick="setLang('en')">EN</button>
+        </div>
+      </li>
+      <li><a href="#booking" class="nav-cta" data-es="Reservar" data-en="Book Now">Reservar</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-bg">
+    <div class="hero-poster"></div>
+    <video class="hero-video" autoplay muted loop playsinline poster="fotos/heronuevo.jpg">
+      <source src="fotos/videoparahero.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="hero-particles">
+    <div class="hero-particle"></div>
+    <div class="hero-particle"></div>
+    <div class="hero-particle"></div>
+    <div class="hero-particle"></div>
+    <div class="hero-particle"></div>
+  </div>
+  <div class="hero-content">
+    <div class="hero-badge" data-es="&#9733; Costa Caribe&#241;a de Panam&#225;" data-en="&#9733; Caribbean Coast of Panama">&#9733; Costa Caribe&#241;a de Panam&#225;</div>
+    <h1 data-es="Tu propia caba&#241;a<br>frente al <em>mar</em>" data-en="Your own cabin<br>on the <em>Caribbean</em>">Tu propia caba&#241;a<br>frente al <em>mar</em></h1>
+    <p class="hero-sub" data-es="Playa privada, cocina al aire libre, hamaca frente al mar y atardeceres que no vas a olvidar. Descon&#233;ctate de todo en el Caribe paname&#241;o." data-en="Private beach, outdoor kitchen, ocean-view hammock, and sunsets you won't forget. Disconnect from everything on Panama's Caribbean coast.">Playa privada, cocina al aire libre, hamaca frente al mar y atardeceres que no vas a olvidar. Descon&#233;ctate de todo en el Caribe paname&#241;o.</p>
+    <div class="hero-cta-group">
+      <a href="#booking" class="btn-primary" data-es="Reservar ahora" data-en="Book now">Reservar ahora</a>
+      <a href="#gallery" class="btn-ghost" data-es="Ver fotos" data-en="See photos">Ver fotos</a>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+  </div>
+</section>
+
+<!-- HIGHLIGHTS -->
+<section class="highlights">
+  <div class="highlights-grid">
+    <div class="highlight-item">
+      <span class="highlight-icon">&#127754;</span>
+      <h3 data-es="Frente al Mar" data-en="Beachfront">Frente al Mar</h3>
+      <p data-es="Acceso directo a playa privada" data-en="Direct private beach access">Acceso directo a playa privada</p>
+    </div>
+    <div class="highlight-item">
+      <span class="highlight-icon">&#127859;</span>
+      <h3 data-es="Cocina al Aire Libre" data-en="Outdoor Kitchen">Cocina al Aire Libre</h3>
+      <p data-es="Cocina equipada con vista al mar" data-en="Equipped kitchen with ocean view">Cocina equipada con vista al mar</p>
+    </div>
+    <div class="highlight-item">
+      <span class="highlight-icon">&#127996;</span>
+      <h3 data-es="Hamaca con Vista" data-en="Ocean-View Hammock">Hamaca con Vista</h3>
+      <p data-es="Rel&#225;jate frente al mar Caribe" data-en="Relax facing the Caribbean sea">Rel&#225;jate frente al mar Caribe</p>
+    </div>
+    <div class="highlight-item">
+      <span class="highlight-icon">&#127769;</span>
+      <h3 data-es="Noches Estrelladas" data-en="Starlit Nights">Noches Estrelladas</h3>
+      <p data-es="Cenas con luces y brisa marina" data-en="Dinners with lights and sea breeze">Cenas con luces y brisa marina</p>
+    </div>
+  </div>
+</section>
+
+<!-- PHOTO GALLERY -->
+<section class="photo-section" id="gallery">
+  <div class="section">
+    <div class="section-header">
+      <p class="section-eyebrow" data-es="Galer&#237;a" data-en="Gallery">Galer&#237;a</p>
+      <h2 data-es="Descubre Villa <em>Emilia</em>" data-en="Discover Villa <em>Emilia</em>">Descubre Villa <em>Emilia</em></h2>
+      <p class="section-desc" data-es="Cada rinc&#243;n de la villa te invita a vivir la experiencia aut&#233;ntica del Caribe paname&#241;o." data-en="Every corner of the villa invites you to live the authentic Panamanian Caribbean experience.">Cada rinc&#243;n de la villa te invita a vivir la experiencia aut&#233;ntica del Caribe paname&#241;o.</p>
+    </div>
+    <div class="photo-grid">
+      <div class="photo-item" id="photo1"><img src="fotos/heronuevo.jpg" alt="Comedor al aire libre con vista al mar"></div>
+      <div class="photo-item" id="photo2"><img src="fotos/hero2.jpg" alt="Hamaca con vista al mar Caribe"></div>
+      <div class="photo-item" id="photo3"><img src="fotos/habitacion.jpeg" alt="Habitación con camas y decoración caribeña"></div>
+      <div class="photo-item" id="photo4"><img src="fotos/villaemilianoche.jpeg" alt="Villa Emilia de noche iluminada"></div>
+      <div class="photo-item" id="photo5"><img src="fotos/galeria1.jpeg" alt="Vista del jardín tropical y el mar"></div>
+      <div class="photo-item" id="photo6"><img src="fotos/cocina-bar.jpeg" alt="Bar y cocina al aire libre frente al mar"></div>
+      <div class="photo-item" id="photo7"><img src="fotos/galera.jpeg" alt="Muelle con islas al fondo"></div>
+      <div class="photo-item" id="photo8"><img src="fotos/fotos-noche-2.jpeg" alt="Villa entre palmeras de noche"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="section">
+    <div class="about-layout">
+      <div class="about-visual">
+        <div class="about-img-main" id="aboutPhoto1">
+          <img src="fotos/cabana-dia.jpg" alt="Villa Emilia de día">
+        </div>
+        <div class="about-img-float" id="aboutPhoto2">
+          <img src="fotos/villaemilianoche.jpeg" alt="Villa Emilia de noche">
+        </div>
+      </div>
+      <div class="about-text">
+        <p class="section-eyebrow" data-es="La Villa" data-en="The Villa">La Villa</p>
+        <h2 data-es="Un refugio en el <em>Caribe paname&#241;o</em>" data-en="A retreat on the <em>Panamanian Caribbean</em>">Un refugio en el <em>Caribe paname&#241;o</em></h2>
+        <p data-es="Villa Emilia es una caba&#241;a privada frente al mar con acceso directo a la playa. Arquitectura caribe&#241;a en blanco y azul, rodeada de palmeras y vegetaci&#243;n tropical, con todo lo que necesitas para desconectarte del mundo." data-en="Villa Emilia is a private beachfront cabin with direct beach access. Caribbean architecture in white and blue, surrounded by palm trees and tropical greenery, with everything you need to disconnect from the world.">Villa Emilia es una caba&#241;a privada frente al mar con acceso directo a la playa. Arquitectura caribe&#241;a en blanco y azul, rodeada de palmeras y vegetaci&#243;n tropical, con todo lo que necesitas para desconectarte del mundo.</p>
+        <p data-es="Ideal para parejas, familias y amigos. Disfruta de mariscos frescos en el comedor al aire libre, tardes en la hamaca, y noches bajo las estrellas con el sonido del mar." data-en="Perfect for couples, families, and friends. Enjoy fresh seafood at the outdoor dining area, afternoons in the hammock, and nights under the stars with the sound of the sea.">Ideal para parejas, familias y amigos. Disfruta de mariscos frescos en el comedor al aire libre, tardes en la hamaca, y noches bajo las estrellas con el sonido del mar.</p>
+        <div class="about-features">
+          <div class="about-feature">
+            <div class="about-feature-dot"></div>
+            <span data-es="Playa privada" data-en="Private beach">Playa privada</span>
+          </div>
+          <div class="about-feature">
+            <div class="about-feature-dot"></div>
+            <span data-es="Cocina equipada" data-en="Equipped kitchen">Cocina equipada</span>
+          </div>
+          <div class="about-feature">
+            <div class="about-feature-dot"></div>
+            <span data-es="Hamaca frente al mar" data-en="Ocean-view hammock">Hamaca frente al mar</span>
+          </div>
+          <div class="about-feature">
+            <div class="about-feature-dot"></div>
+            <span data-es="Piscina natural" data-en="Natural pool">Piscina natural</span>
+          </div>
+          <div class="about-feature">
+            <div class="about-feature-dot"></div>
+            <span data-es="Muelle privado" data-en="Private dock">Muelle privado</span>
+          </div>
+          <div class="about-feature">
+            <div class="about-feature-dot"></div>
+            <span data-es="Estacionamiento" data-en="Parking">Estacionamiento</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCES -->
+<section class="exp-section" id="experiences">
+  <div class="section">
+    <div class="section-header">
+      <p class="section-eyebrow" data-es="Experiencias" data-en="Experiences">Experiencias</p>
+      <h2 data-es="Vive el Caribe <em>a tu manera</em>" data-en="Live the Caribbean <em>your way</em>">Vive el Caribe <em>a tu manera</em></h2>
+      <p class="section-desc" data-es="Desde aventuras en el agua hasta cenas frente al mar, cada momento en Villa Emilia es una experiencia &#250;nica." data-en="From water adventures to dinners by the sea, every moment at Villa Emilia is a unique experience.">Desde aventuras en el agua hasta cenas frente al mar, cada momento en Villa Emilia es una experiencia &#250;nica.</p>
+    </div>
+    <div class="exp-grid">
+      <div class="exp-card">
+        <div class="exp-card-bg"></div>
+        <div class="exp-card-overlay"></div>
+        <div class="exp-card-content">
+          <span class="exp-card-tag" data-es="Aventura" data-en="Adventure">Aventura</span>
+          <h3 data-es="Explora el Mar" data-en="Explore the Sea">Explora el Mar</h3>
+          <p data-es="Snorkel, paseos en lancha a islas cercanas, pesca artesanal y tours por la costa caribe&#241;a." data-en="Snorkeling, boat trips to nearby islands, artisanal fishing, and tours along the Caribbean coast.">Snorkel, paseos en lancha a islas cercanas, pesca artesanal y tours por la costa caribe&#241;a.</p>
+        </div>
+      </div>
+      <div class="exp-card">
+        <div class="exp-card-bg"></div>
+        <div class="exp-card-overlay"></div>
+        <div class="exp-card-content">
+          <span class="exp-card-tag" data-es="Gastronom&#237;a" data-en="Cuisine">Gastronom&#237;a</span>
+          <h3 data-es="Sabores del Caribe" data-en="Caribbean Flavors">Sabores del Caribe</h3>
+          <p data-es="Mariscos frescos del d&#237;a preparados en la cocina al aire libre con vista al oc&#233;ano." data-en="Fresh catch of the day prepared in the outdoor kitchen with ocean views.">Mariscos frescos del d&#237;a preparados en la cocina al aire libre con vista al oc&#233;ano.</p>
+        </div>
+      </div>
+      <div class="exp-card">
+        <div class="exp-card-bg"></div>
+        <div class="exp-card-overlay"></div>
+        <div class="exp-card-content">
+          <span class="exp-card-tag" data-es="Relax" data-en="Relax">Relax</span>
+          <h3 data-es="Noches Frente al Mar" data-en="Nights by the Sea">Noches Frente al Mar</h3>
+          <p data-es="Luces de ambiente, brisa marina, el sonido de las olas y un cielo lleno de estrellas." data-en="Ambient lighting, sea breeze, the sound of waves, and a sky full of stars.">Luces de ambiente, brisa marina, el sonido de las olas y un cielo lleno de estrellas.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AMENITIES -->
+<section id="amenities">
+  <div class="section">
+    <div class="section-header">
+      <p class="section-eyebrow" data-es="Comodidades" data-en="Amenities">Comodidades</p>
+      <h2 data-es="Todo lo que necesitas <em>incluido</em>" data-en="Everything you need <em>included</em>">Todo lo que necesitas <em>incluido</em></h2>
+    </div>
+    <div class="amenities-grid">
+      <div class="amenity-card">
+        <div class="amenity-icon-wrap">&#127754;</div>
+        <h3 data-es="Playa Privada" data-en="Private Beach">Playa Privada</h3>
+        <p data-es="Acceso directo a la playa con aguas turquesa del Caribe. Tu propia orilla." data-en="Direct access to the beach with turquoise Caribbean waters. Your own shore.">Acceso directo a la playa con aguas turquesa del Caribe. Tu propia orilla.</p>
+      </div>
+      <div class="amenity-card">
+        <div class="amenity-icon-wrap">&#127859;</div>
+        <h3 data-es="Cocina al Aire Libre" data-en="Outdoor Kitchen">Cocina al Aire Libre</h3>
+        <p data-es="Cocina equipada con refrigerador, estufa y parrilla bajo techo con vista al mar." data-en="Equipped kitchen with fridge, stove, and grill under a roof with ocean views.">Cocina equipada con refrigerador, estufa y parrilla bajo techo con vista al mar.</p>
+      </div>
+      <div class="amenity-card">
+        <div class="amenity-icon-wrap">&#127860;</div>
+        <h3 data-es="Comedor Frente al Mar" data-en="Ocean-View Dining">Comedor Frente al Mar</h3>
+        <p data-es="Mesa de madera con toldos a rayas para comidas bajo la brisa caribe&#241;a." data-en="Wooden table with striped awnings for meals under the Caribbean breeze.">Mesa de madera con toldos a rayas para comidas bajo la brisa caribe&#241;a.</p>
+      </div>
+      <div class="amenity-card">
+        <div class="amenity-icon-wrap">&#128716;</div>
+        <h3 data-es="Habitaci&#243;n Amplia" data-en="Spacious Room">Habitaci&#243;n Amplia</h3>
+        <p data-es="Habitaci&#243;n con camas c&#243;modas, decoraci&#243;n caribe&#241;a y vista al mar." data-en="Room with comfortable beds, Caribbean decor, and ocean views.">Habitaci&#243;n con camas c&#243;modas, decoraci&#243;n caribe&#241;a y vista al mar.</p>
+      </div>
+      <div class="amenity-card">
+        <div class="amenity-icon-wrap">&#128674;</div>
+        <h3 data-es="Muelle Privado" data-en="Private Dock">Muelle Privado</h3>
+        <p data-es="Muelle propio para lanchas, pesca o simplemente contemplar el atardecer." data-en="Your own dock for boats, fishing, or simply watching the sunset.">Muelle propio para lanchas, pesca o simplemente contemplar el atardecer.</p>
+      </div>
+      <div class="amenity-card">
+        <div class="amenity-icon-wrap">&#127796;</div>
+        <h3 data-es="Jardines Tropicales" data-en="Tropical Gardens">Jardines Tropicales</h3>
+        <p data-es="Rodeada de palmeras, plantas tropicales y vegetaci&#243;n caribe&#241;a natural." data-en="Surrounded by palm trees, tropical plants, and natural Caribbean greenery.">Rodeada de palmeras, plantas tropicales y vegetaci&#243;n caribe&#241;a natural.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIAL -->
+<section class="testimonial-section">
+  <div class="testimonial-inner">
+    <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+    <blockquote class="testimonial-quote" data-es="&ldquo;Un lugar incre&#237;ble. La vista al mar, los mariscos frescos y la tranquilidad total. Se siente como tener tu propia isla privada. Sin duda volveremos.&rdquo;" data-en="&ldquo;An incredible place. The ocean view, fresh seafood, and total peace. It feels like having your own private island. We'll definitely be back.&rdquo;">&ldquo;Un lugar incre&#237;ble. La vista al mar, los mariscos frescos y la tranquilidad total. Se siente como tener tu propia isla privada. Sin duda volveremos.&rdquo;</blockquote>
+    <p class="testimonial-author" data-es="&#8212; Hu&#233;sped de Ciudad de Panam&#225;" data-en="&#8212; Guest from Panama City">&#8212; Hu&#233;sped de Ciudad de Panam&#225;</p>
+  </div>
+</section>
+
+<!-- LOCATION -->
+<section id="location">
+  <div class="section">
+    <div class="section-header">
+      <p class="section-eyebrow" data-es="Ubicaci&#243;n" data-en="Location">Ubicaci&#243;n</p>
+      <h2 data-es="C&#243;mo <em>llegar</em>" data-en="How to <em>get here</em>">C&#243;mo <em>llegar</em></h2>
+    </div>
+    <div class="location-layout">
+      <div class="location-details">
+        <h3 data-es="Desde Ciudad de Panam&#225;" data-en="From Panama City">Desde Ciudad de Panam&#225;</h3>
+        <ul>
+          <li><span>&#128664;</span> <span data-es="Aproximadamente 2-3 horas en auto por la costa caribe&#241;a" data-en="Approximately 2-3 hours by car along the Caribbean coast">Aproximadamente 2-3 horas en auto por la costa caribe&#241;a</span></li>
+          <li><span>&#128652;</span> <span data-es="Transporte disponible desde la terminal" data-en="Transportation available from the terminal">Transporte disponible desde la terminal</span></li>
+          <li><span>&#127981;</span> <span data-es="Cerca de comunidades costeras con servicios" data-en="Close to coastal communities with services">Cerca de comunidades costeras con servicios</span></li>
+        </ul>
+        <h3 data-es="Para visitantes internacionales" data-en="For international visitors">Para visitantes internacionales</h3>
+        <ul>
+          <li><span>&#9992;&#65039;</span> <span data-es="Vuelo al Aeropuerto Tocumen (PTY), luego ruta terrestre" data-en="Fly to Tocumen Airport (PTY), then ground route">Vuelo al Aeropuerto Tocumen (PTY), luego ruta terrestre</span></li>
+          <li><span>&#128179;</span> <span data-es="Pagos en d&#243;lares USD &#8212; moneda oficial de Panam&#225;" data-en="Payments in USD &#8212; Panama's official currency">Pagos en d&#243;lares USD &#8212; moneda oficial de Panam&#225;</span></li>
+          <li><span>&#127757;</span> <span data-es="No se requiere visa para muchos pa&#237;ses" data-en="No visa required for many countries">No se requiere visa para muchos pa&#237;ses</span></li>
+        </ul>
+      </div>
+      <div class="location-map">
+        <span class="location-map-icon">&#128205;</span>
+        <span data-es="Mapa pr&#243;ximamente" data-en="Map coming soon">Mapa pr&#243;ximamente</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BOOKING -->
+<section class="booking-section" id="booking">
+  <div class="booking-content">
+    <h2 data-es="Reserva tu <em>escape</em>" data-en="Book your <em>escape</em>">Reserva tu <em>escape</em></h2>
+    <p class="booking-sub" data-es="Env&#237;anos tu solicitud y te responderemos en minutos por WhatsApp con disponibilidad y precios." data-en="Send us your request and we'll reply within minutes via WhatsApp with availability and rates.">Env&#237;anos tu solicitud y te responderemos en minutos por WhatsApp con disponibilidad y precios.</p>
+    <div id="bookingFormWrap">
+      <form class="booking-form" id="bookingForm" onsubmit="handleBooking(event)">
+        <div id="formError" class="form-error-msg"></div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="guestName" data-es="Nombre" data-en="Name">Nombre</label>
+            <input type="text" id="guestName" required placeholder="Juan P&#233;rez">
+          </div>
+          <div class="form-group">
+            <label for="guestPhone" data-es="Tel&#233;fono / WhatsApp" data-en="Phone / WhatsApp">Tel&#233;fono / WhatsApp</label>
+            <input type="tel" id="guestPhone" required placeholder="+507 6XXX-XXXX">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="guestEmail" data-es="Email" data-en="Email">Email</label>
+            <input type="email" id="guestEmail" placeholder="tu@email.com">
+          </div>
+          <div class="form-group">
+            <label for="country" data-es="Pa&#237;s" data-en="Country">Pa&#237;s</label>
+            <input type="text" id="country" placeholder="Panam&#225;">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="checkIn" data-es="Llegada" data-en="Check-in">Llegada</label>
+            <input type="date" id="checkIn" required>
+          </div>
+          <div class="form-group">
+            <label for="checkOut" data-es="Salida" data-en="Check-out">Salida</label>
+            <input type="date" id="checkOut" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="guests" data-es="Hu&#233;spedes" data-en="Guests">Hu&#233;spedes</label>
+            <select id="guests">
+              <option value="1-2">1-2</option>
+              <option value="3-4">3-4</option>
+              <option value="5-6">5-6</option>
+              <option value="7+">7+</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="source" data-es="&#191;C&#243;mo nos encontraste?" data-en="How did you find us?">&#191;C&#243;mo nos encontraste?</label>
+            <select id="source">
+              <option value="instagram">Instagram</option>
+              <option value="google" data-es="Google / Buscador" data-en="Google / Search">Google / Buscador</option>
+              <option value="recomendacion" data-es="Recomendaci&#243;n" data-en="Recommendation">Recomendaci&#243;n</option>
+              <option value="facebook">Facebook</option>
+              <option value="otro" data-es="Otro" data-en="Other">Otro</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group form-full">
+            <label for="message" data-es="Mensaje (opcional)" data-en="Message (optional)">Mensaje (opcional)</label>
+            <textarea id="message" data-es-placeholder="Cu&#233;ntanos sobre tu viaje..." data-en-placeholder="Tell us about your trip..." placeholder="Cu&#233;ntanos sobre tu viaje..."></textarea>
+          </div>
+        </div>
+        <button type="submit" class="whatsapp-btn" id="submitBtn">
+          <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          <span data-es="Enviar por WhatsApp" data-en="Send via WhatsApp">Enviar por WhatsApp</span>
+        </button>
+      </form>
+    </div>
+    <div id="bookingSuccess" class="booking-form form-success" hidden>
+      <div class="form-success-icon">&#9989;</div>
+      <h3 data-es="&#161;Solicitud enviada!" data-en="Request sent!">&#161;Solicitud enviada!</h3>
+      <p data-es="Tus datos han sido registrados. Ahora te redirigimos a WhatsApp para confirmar tu reserva." data-en="Your details have been recorded. We're now redirecting you to WhatsApp to confirm your booking.">Tus datos han sido registrados. Ahora te redirigimos a WhatsApp para confirmar tu reserva.</p>
+      <p data-es="Te responderemos en menos de 1 hora." data-en="We'll respond within 1 hour.">Te responderemos en menos de 1 hora.</p>
+    </div>
+    <p class="booking-note" data-es="Tambi&#233;n puedes escribirnos directamente al WhatsApp: +507 6699-2428" data-en="You can also message us directly on WhatsApp: +507 6699-2428">Tambi&#233;n puedes escribirnos directamente al WhatsApp: +507 6699-2428</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="footer-logo">Villa Emilia</div>
+      <p class="footer-tagline" data-es="Tu para&#237;so en el Caribe paname&#241;o" data-en="Your paradise on the Panamanian Caribbean">Tu para&#237;so en el Caribe paname&#241;o</p>
+    </div>
+    <div class="footer-col">
+      <h4 data-es="Contacto" data-en="Contact">Contacto</h4>
+      <a href="https://wa.me/50766992428" target="_blank" rel="noopener">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
+        +507 6699-2428
+      </a>
+    </div>
+    <div class="footer-col">
+      <h4 data-es="S&#237;guenos" data-en="Follow Us">S&#237;guenos</h4>
+      <a href="https://www.instagram.com/belavillaemilia_pty/" target="_blank" rel="noopener">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+        @belavillaemilia_pty
+      </a>
+    </div>
+  </div>
+  <p class="footer-copy">&copy; 2025 Villa Emilia &middot; Panam&#225;</p>
+</footer>
+
+<!-- FLOATING CTA MOBILE -->
+<div class="floating-cta">
+  <a href="#booking" class="whatsapp-btn" data-es="Reservar por WhatsApp" data-en="Book via WhatsApp">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    Reservar por WhatsApp
+  </a>
+</div>
+
+<script>
+var WHATSAPP_NUMBER = '50766992428';
+var MAKE_WEBHOOK_URL = '';
+
+var currentLang = 'es';
+
+function setLang(lang) {
+  currentLang = lang;
+  document.getElementById('langEs').classList.toggle('active', lang === 'es');
+  document.getElementById('langEn').classList.toggle('active', lang === 'en');
+  document.querySelectorAll('[data-es]').forEach(function(el) {
+    var text = el.getAttribute('data-' + lang);
+    if (text) el.innerHTML = text;
+  });
+  document.querySelectorAll('[data-' + lang + '-placeholder]').forEach(function(el) {
+    el.placeholder = el.getAttribute('data-' + lang + '-placeholder');
+  });
+  try { localStorage.setItem('ve-lang', lang); } catch(e) {}
+}
+
+try {
+  var saved = localStorage.getItem('ve-lang');
+  if (saved === 'en') setLang('en');
+} catch(e) {}
+
+var nav = document.getElementById('nav');
+window.addEventListener('scroll', function() {
+  nav.classList.toggle('scrolled', window.scrollY > 40);
+});
+
+document.getElementById('menuBtn').addEventListener('click', function() {
+  document.getElementById('navLinks').classList.toggle('open');
+});
+document.querySelectorAll('.nav-links a').forEach(function(a) {
+  a.addEventListener('click', function() {
+    document.getElementById('navLinks').classList.remove('open');
+  });
+});
+
+var today = new Date().toISOString().split('T')[0];
+var checkInEl = document.getElementById('checkIn');
+var checkOutEl = document.getElementById('checkOut');
+if (checkInEl) checkInEl.setAttribute('min', today);
+if (checkOutEl) checkOutEl.setAttribute('min', today);
+checkInEl.addEventListener('change', function() {
+  checkOutEl.setAttribute('min', this.value);
+  if (checkOutEl.value && checkOutEl.value <= this.value) checkOutEl.value = '';
+});
+
+function sendToWebhook(data) {
+  if (!MAKE_WEBHOOK_URL) return Promise.resolve();
+  return fetch(MAKE_WEBHOOK_URL, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(data)
+  }).catch(function() {});
+}
+
+function buildWhatsAppMessage(data) {
+  var text;
+  if (currentLang === 'en') {
+    text = 'Hello! I would like to book Villa Emilia.\n\n';
+    text += 'Name: ' + data.name + '\n';
+    text += 'Phone: ' + data.phone + '\n';
+    if (data.email) text += 'Email: ' + data.email + '\n';
+    text += 'Check-in: ' + data.checkIn + '\n';
+    text += 'Check-out: ' + data.checkOut + '\n';
+    text += 'Nights: ' + data.nights + '\n';
+    text += 'Guests: ' + data.guests + '\n';
+    if (data.country) text += 'Country: ' + data.country + '\n';
+    text += 'Found us: ' + data.source + '\n';
+    if (data.message) text += '\nMessage: ' + data.message;
+  } else {
+    text = '¡Hola! Me gustaría reservar Villa Emilia.\n\n';
+    text += 'Nombre: ' + data.name + '\n';
+    text += 'Teléfono: ' + data.phone + '\n';
+    if (data.email) text += 'Email: ' + data.email + '\n';
+    text += 'Llegada: ' + data.checkIn + '\n';
+    text += 'Salida: ' + data.checkOut + '\n';
+    text += 'Noches: ' + data.nights + '\n';
+    text += 'Huéspedes: ' + data.guests + '\n';
+    if (data.country) text += 'País: ' + data.country + '\n';
+    text += 'Nos encontró por: ' + data.source + '\n';
+    if (data.message) text += '\nMensaje: ' + data.message;
+  }
+  return text;
+}
+
+function calcNights(checkIn, checkOut) {
+  var d1 = new Date(checkIn);
+  var d2 = new Date(checkOut);
+  var diff = Math.round((d2 - d1) / (1000 * 60 * 60 * 24));
+  return diff > 0 ? diff : 1;
+}
+
+function handleBooking(e) {
+  e.preventDefault();
+  var form = document.getElementById('bookingForm');
+  var errorEl = document.getElementById('formError');
+  errorEl.style.display = 'none';
+
+  var data = {
+    name: document.getElementById('guestName').value.trim(),
+    phone: document.getElementById('guestPhone').value.trim(),
+    email: document.getElementById('guestEmail').value.trim(),
+    checkIn: document.getElementById('checkIn').value,
+    checkOut: document.getElementById('checkOut').value,
+    guests: document.getElementById('guests').value,
+    country: document.getElementById('country').value.trim(),
+    source: document.getElementById('source').value,
+    message: document.getElementById('message').value.trim(),
+    language: currentLang,
+    timestamp: new Date().toISOString(),
+    page: 'villa-emilia-landing'
+  };
+
+  data.nights = calcNights(data.checkIn, data.checkOut);
+  form.classList.add('form-sending');
+
+  sendToWebhook(data).then(function() {
+    document.getElementById('bookingFormWrap').hidden = true;
+    document.getElementById('bookingSuccess').hidden = false;
+
+    var waText = buildWhatsAppMessage(data);
+    var waUrl = 'https://wa.me/' + WHATSAPP_NUMBER + '?text=' + encodeURIComponent(waText);
+
+    setTimeout(function() {
+      window.open(waUrl, '_blank');
+    }, 1200);
+  });
+}
+</script>
+
+</body></html>
